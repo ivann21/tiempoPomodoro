@@ -26,7 +26,7 @@
         android:id="@+id/firstRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="1. Registro 25 minutos "
         app:layout_constraintStart_toStartOf="@+id/firstRegisterEditText"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,7 @@
         android:id="@+id/secondRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="2. Registro 25 minutos"
         app:layout_constraintStart_toStartOf="@+id/secondRegisterEditText"
         app:layout_constraintTop_toBottomOf="@+id/button" />
@@ -87,7 +87,7 @@
         android:id="@+id/thirdRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="3. Registro 25 minutos"
         app:layout_constraintStart_toStartOf="@+id/thirdRegisterEditText"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -123,7 +123,7 @@
         android:id="@+id/fourRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="4. Registro 25 minutos"
         app:layout_constraintTop_toBottomOf="@+id/button3"
         tools:ignore="MissingConstraints"
@@ -157,7 +157,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fourRegisterEditText" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/sendButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
