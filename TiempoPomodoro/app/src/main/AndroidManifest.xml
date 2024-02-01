@@ -13,10 +13,10 @@
         android:theme="@style/Theme.TiempoPomodoro"
         tools:targetApi="31">
         <activity
-            android:name=".registerActivity"
+            android:name=".mainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".DescriptionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".CreateRegisterActivity"
             android:exported="true"></activity>
     </application>
 

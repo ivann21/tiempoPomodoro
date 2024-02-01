@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CreateRegisterActivity">
 
     <EditText
-        android:id="@+id/firstRegisterEditText"
+        android:id="@+id/numberRegisterEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -26,36 +26,23 @@
         android:id="@+id/firstRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="1. Registro 25 minutos "
-        app:layout_constraintStart_toStartOf="@+id/firstRegisterEditText"
+        android:layout_marginTop="40dp"
+        android:text="numero de tarea"
+        app:layout_constraintStart_toStartOf="@+id/numberRegisterEditText"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/secondRegisterTextView"
+        android:id="@+id/nameRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="2. Registro 25 minutos"
-        app:layout_constraintStart_toStartOf="@+id/secondRegisterEditText"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#F44336"
-        android:text="Descanso de 5 min"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/firstRegisterEditText"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/firstRegisterEditText"
-        app:layout_constraintTop_toBottomOf="@+id/firstRegisterEditText" />
+        android:layout_marginTop="30dp"
+        android:text="Nombre"
+        app:layout_constraintStart_toStartOf="@+id/nameRegisterEditText"
+        app:layout_constraintTop_toBottomOf="@+id/numberRegisterEditText" />
 
     <EditText
-        android:id="@+id/secondRegisterEditText"
+        android:id="@+id/nameRegisterEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -68,32 +55,19 @@
         android:minHeight="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondRegisterTextView" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#F44336"
-        android:text="Descanso de 5 min"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/secondRegisterEditText"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/secondRegisterEditText"
-        app:layout_constraintTop_toBottomOf="@+id/secondRegisterEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/nameRegisterTextView" />
 
     <TextView
-        android:id="@+id/thirdRegisterTextView"
+        android:id="@+id/DescriptionRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="3. Registro 25 minutos"
-        app:layout_constraintStart_toStartOf="@+id/thirdRegisterEditText"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        android:layout_marginTop="30dp"
+        android:text="Descripcion"
+        app:layout_constraintStart_toStartOf="@+id/descriptionRegisterEditText"
+        app:layout_constraintTop_toBottomOf="@+id/nameRegisterEditText" />
 
     <EditText
-        android:id="@+id/thirdRegisterEditText"
+        android:id="@+id/descriptionRegisterEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -105,67 +79,41 @@
         android:minHeight="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thirdRegisterTextView" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#F44336"
-        android:text="Descanso de 5 min"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/thirdRegisterEditText"
-        app:layout_constraintStart_toStartOf="@+id/thirdRegisterEditText"
-        app:layout_constraintTop_toBottomOf="@+id/thirdRegisterEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionRegisterTextView" />
 
     <TextView
-        android:id="@+id/fourRegisterTextView"
+        android:id="@+id/timeRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="4. Registro 25 minutos"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        android:layout_marginTop="30dp"
+        android:text="Tiempo"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionRegisterEditText"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="27dp" />
-
-    <EditText
-        android:id="@+id/fourRegisterEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:hint="Escribe aqui"
-        android:inputType="text"
-        android:minHeight="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fourRegisterTextView" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#F44336"
-        android:text="Descanso de 5 min"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/fourRegisterEditText"
-        app:layout_constraintStart_toStartOf="@+id/fourRegisterEditText"
-        app:layout_constraintTop_toBottomOf="@+id/fourRegisterEditText" />
 
     <Button
         android:id="@+id/sendButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#2196F3"
-        android:text="ENVIAR"
+        android:text="AÑADIR"
         app:cornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Escribe aqui"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="391dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
