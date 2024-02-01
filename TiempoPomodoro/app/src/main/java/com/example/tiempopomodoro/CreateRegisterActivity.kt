@@ -1,5 +1,6 @@
 package com.example.tiempopomodoro
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.room.Room
@@ -45,7 +46,11 @@ class CreateRegisterActivity : AppCompatActivity() {
                 .save(register)
 
 
-            finish()
+            val createBookIntent = Intent(
+                this, MainActivity::class.java
+            )
+
+            startActivity(createBookIntent)
 
         }
     }
