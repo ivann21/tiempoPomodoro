@@ -46,11 +46,11 @@ class CreateRegisterActivity : AppCompatActivity() {
                 .save(register)
 
 
-            val createBookIntent = Intent(
+            val createRegisterIntent = Intent(
                 this, RegisterActivity::class.java
             )
 
-            startActivity(createBookIntent)
+            startActivity(createRegisterIntent)
 
         }
     }
