@@ -4,18 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.room.Room
-import com.example.tiempopomodoro.databinding.ActivityMainBinding
 import com.example.tiempopomodoro.database.AppDatabase
+import com.example.tiempopomodoro.databinding.ActivityRegisterCreateBinding
 import com.example.tiempopomodoro.model.Register
 
 class CreateRegisterActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityRegisterCreateBinding
 
     private lateinit var db: AppDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_register_create)
+        binding = ActivityRegisterCreateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -47,7 +47,7 @@ class CreateRegisterActivity : AppCompatActivity() {
 
 
             val createBookIntent = Intent(
-                this, MainActivity::class.java
+                this, RegisterActivity::class.java
             )
 
             startActivity(createBookIntent)

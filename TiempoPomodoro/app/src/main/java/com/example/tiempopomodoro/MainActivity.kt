@@ -3,54 +3,24 @@ package com.example.tiempopomodoro
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Room
-import com.example.tiempopomodoro.database.AppDatabase
-import com.example.tiempopomodoro.databinding.ActivityRegisterBinding
+import com.example.tiempopomodoro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityRegisterBinding
-    private lateinit var db: AppDatabase
-
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        db = Room
-            .databaseBuilder(
-                this,
-                AppDatabase::class.java,
-                AppDatabase.DATABASE_NAME
-            )
-            .allowMainThreadQueries().build()
-
-        binding.recyclerView.layoutManager =
-            GridLayoutManager(this, 1, RecyclerView.VERTICAL, false)
-
-        binding.recyclerView.adapter = RegisterAdapter(
-            db.RegisterDao().list(), this, db
-        )
-
-        binding.addRegisterButton.setOnClickListener {
-            val createRegisterIntent = Intent(
+        binding.joinbutton.setOnClickListener{
+            val createBookIntent = Intent(
                 this, CreateRegisterActivity::class.java
             )
 
-            startActivity(createRegisterIntent)
+            startActivity(createBookIntent)
         }
+
+
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        val adapter = binding.recyclerView.adapter as RegisterAdapter
-
-        adapter.registers = db.RegisterDao().list()
-
-        adapter.notifyDataSetChanged()
-    }
-
-    // If you have a context menu for registers, you can override onCreateContextMenu similarly.
 }

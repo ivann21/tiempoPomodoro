@@ -13,10 +13,10 @@
         android:theme="@style/Theme.TiempoPomodoro"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:name=".RegisterActivity"
+            android:exported="true" />
         <activity
-            android:name=".DescriptionActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
