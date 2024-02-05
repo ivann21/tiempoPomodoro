@@ -3,8 +3,10 @@ package com.example.tiempopomodoro
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
@@ -68,5 +70,12 @@ class RegisterActivity : AppCompatActivity() {
         adapter.registers = db.RegisterDao().list()
 
         adapter.notifyDataSetChanged()
+    }
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        menuInflater.inflate(R.menu.contextual_menu, menu)
     }
 }
