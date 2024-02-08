@@ -16,7 +16,7 @@
         android:ems="10"
         android:hint="Escribe aqui"
         android:inputType="text"
-        android:minHeight="40dp"
+        android:minHeight="48dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,10 +26,10 @@
         android:id="@+id/firstRegisterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="numero de tarea"
         app:layout_constraintStart_toStartOf="@+id/numberRegisterEditText"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -52,7 +52,7 @@
         android:ems="10"
         android:hint="Escribe aqui"
         android:inputType="text"
-        android:minHeight="40dp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameRegisterTextView" />
@@ -76,7 +76,7 @@
         android:ems="10"
         android:hint="Escribe aqui"
         android:inputType="text"
-        android:minHeight="40dp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DescriptionRegisterTextView" />
@@ -86,10 +86,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Tiempo"
+        android:text="Tiempo en minutos"
+        app:layout_constraintStart_toStartOf="@+id/editTextTime"
         app:layout_constraintTop_toBottomOf="@+id/descriptionRegisterEditText"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="27dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/sendButton"
@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="#4CAF50"
         android:text="AÑADIR"
         app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,8 +113,20 @@
         android:ems="10"
         android:hint="Escribe aqui"
         android:inputType="time"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeRegisterTextView" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

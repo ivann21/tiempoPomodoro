@@ -22,7 +22,7 @@ class RegisterAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         return ItemViewHolder(
-            layoutInflater.inflate(R.layout.register_layout, parent, false)
+            layoutInflater.inflate(R.layout.register_layout,null)
         )
     }
 

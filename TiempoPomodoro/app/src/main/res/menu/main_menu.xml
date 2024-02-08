@@ -2,8 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/inicioMenuItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Inicio" />
+    <item
         android:id="@+id/añadirMenuItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Añadir" />
+    <item
+        android:id="@+id/viewMenuItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="ver registros" />
 </menu>

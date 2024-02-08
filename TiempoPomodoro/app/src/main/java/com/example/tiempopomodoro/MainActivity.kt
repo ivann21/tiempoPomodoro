@@ -1,10 +1,12 @@
 package com.example.tiempopomodoro
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.tiempopomodoro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,35 +15,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar2)
-
-
 
         binding.joinbutton.setOnClickListener{
-            val createBookIntent = Intent(
-                this, CreateRegisterActivity::class.java
-            )
+            val username = binding.username.text.toString().trim()
+            val password = binding.password.text.toString().trim()
 
-            startActivity(createBookIntent)
-        }
-
-
-    }
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.añadirMenuItem -> {
-                val intent = Intent(
-                    this, CreateRegisterActivity::class.java
-                )
-                startActivity(intent)
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Por favor, introduce un usuario y una contraseña", Toast.LENGTH_SHORT).show()
+            } else {
+                val createBookIntent = Intent(this, RegisterActivity::class.java)
+                startActivity(createBookIntent)
             }
         }
-        return super.onOptionsItemSelected(item)
+
+
     }
 
 }

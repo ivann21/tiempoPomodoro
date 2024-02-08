@@ -3,7 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:backgroundTint="#F44336">
+
+    <TextView
+        android:id="@+id/numeroTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Numero"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/numberTextView"
@@ -11,8 +23,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="numero"
+        app:layout_constraintStart_toStartOf="@+id/numeroTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/numeroTitleTextView" />
+
+    <TextView
+        android:id="@+id/nameTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Nombre"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numeroTitleTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -20,9 +43,21 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:text="nombre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nameTitleTextView" />
+
+    <TextView
+        android:id="@+id/DescripcionTitleTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Descripción"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/numberTextView"
         app:layout_constraintTop_toBottomOf="@+id/numberTextView" />
 
     <TextView
@@ -30,28 +65,64 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:text="descripcion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreTextView" />
+        app:layout_constraintStart_toStartOf="@+id/DescripcionTitleTextview"
+        app:layout_constraintTop_toBottomOf="@+id/DescripcionTitleTextview" />
+
+    <TextView
+        android:id="@+id/tiempoTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tiempo en minutos"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/descriptionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
 
     <TextView
         android:id="@+id/tiempoTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:text="tiempo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+        app:layout_constraintStart_toStartOf="@+id/tiempoTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/tiempoTitleTextView" />
 
     <ImageView
         android:id="@+id/deleteRegisterButton"
-        android:layout_width="wrap_content"
+        android:layout_width="204dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="#FFA6A6"
+        app:layout_constraintStart_toStartOf="@+id/tiempoTextView"
         app:layout_constraintTop_toBottomOf="@+id/tiempoTextView"
         app:srcCompat="@drawable/delete_24px" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#929BEA"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteRegisterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deleteRegisterButton"
+        app:layout_constraintTop_toTopOf="@+id/deleteRegisterButton"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteRegisterButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

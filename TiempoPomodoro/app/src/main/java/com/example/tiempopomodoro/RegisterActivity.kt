@@ -59,6 +59,18 @@ class RegisterActivity : AppCompatActivity() {
                 )
                 startActivity(intent)
             }
+            R.id.inicioMenuItem -> {
+                val intent = Intent(
+                    this, MainActivity::class.java
+                )
+                startActivity(intent)
+            }
+            R.id.viewMenuItem -> {
+                val intent = Intent(
+                    this, RegisterActivity::class.java
+                )
+                startActivity(intent)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -71,11 +83,5 @@ class RegisterActivity : AppCompatActivity() {
 
         adapter.notifyDataSetChanged()
     }
-    override fun onCreateContextMenu(
-        menu: ContextMenu?,
-        v: View?,
-        menuInfo: ContextMenu.ContextMenuInfo?
-    ) {
-        menuInflater.inflate(R.menu.contextual_menu, menu)
-    }
+
 }
