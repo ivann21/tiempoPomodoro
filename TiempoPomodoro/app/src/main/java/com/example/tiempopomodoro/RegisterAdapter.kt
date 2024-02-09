@@ -1,10 +1,12 @@
 package com.example.tiempopomodoro
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tiempopomodoro.database.AppDatabase
 import com.example.tiempopomodoro.databinding.RegisterLayoutBinding
@@ -48,6 +50,13 @@ class RegisterAdapter(
             if (deletedRows == 0) {
                 Toast.makeText(context, "No se ha eliminado ningún registro", Toast.LENGTH_LONG).show()
             }
+        }
+        binding.editRegisterButton.setOnClickListener{
+            val intent = Intent(
+                context, editRegisterActivity::class.java
+            )
+            intent.putExtra("number", register.number)
+            context.startActivity(intent)
         }
     }
 }

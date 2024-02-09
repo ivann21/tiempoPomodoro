@@ -12,6 +12,8 @@ interface RegisterDao {
     @Query("DELETE FROM register WHERE number=:number")
     fun delete(number: String): Int
 
+    @Query("SELECT * FROM register WHERE number=:number")
+    fun getRegisterByNumber(number: String?): Register?
     @Insert
     fun save(register: Register)
 }

@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiempoPomodoro"
         tools:targetApi="31">
-
+        <activity
+            android:name=".editRegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,7 +26,7 @@
         </activity>
         <activity
             android:name=".CreateRegisterActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
