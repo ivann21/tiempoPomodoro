@@ -9,6 +9,7 @@ import android.view.MenuItem
 import androidx.room.Room
 import com.example.tiempopomodoro.database.AppDatabase
 import com.example.tiempopomodoro.databinding.ActivityEditRegisterBinding
+import com.example.tiempopomodoro.model.Register
 
 class editRegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEditRegisterBinding
@@ -32,6 +33,21 @@ class editRegisterActivity : AppCompatActivity() {
             editTextNombre.setText(register.nombre)
             editTextDescripcion.setText(register.description)
             editTextTiempo.setText(register.tiempo)
+        }
+        binding.editButton.setOnClickListener {
+            val number = binding.numberRegisterEditText2.text.toString()
+            val nombre = binding.nameRegisterEditText2.text.toString()
+            val descripcion = binding.descriptionRegisterEditText2.text.toString()
+            val tiempo = binding.editTextTime2.text.toString()
+
+            val register = Register(number, nombre, descripcion, tiempo)
+            db.RegisterDao().update(register)
+
+            val createRegisterIntent = Intent(
+                this, RegisterActivity::class.java
+            )
+
+            startActivity(createRegisterIntent)
         }
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

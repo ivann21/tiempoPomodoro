@@ -3,6 +3,7 @@ package com.example.tiempopomodoro.database.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.example.tiempopomodoro.model.Register
 @Dao
 interface RegisterDao {
@@ -14,6 +15,10 @@ interface RegisterDao {
 
     @Query("SELECT * FROM register WHERE number=:number")
     fun getRegisterByNumber(number: String?): Register?
+
     @Insert
     fun save(register: Register)
+
+    @Update
+    fun update(register: Register)
 }
