@@ -27,8 +27,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(createBookIntent)
             }
         }
-
-
+        binding.guestButton.setOnClickListener{
+                val createBookIntent = Intent(this, RegisterActivity::class.java)
+                startActivity(createBookIntent)
+            }
     }
 
 }
